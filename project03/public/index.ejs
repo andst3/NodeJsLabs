@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+<body>
+<div class="body">
+    <div class="form">
+        <input type="text" name="login" placeholder="Логин">
+        <input type="text" name="room" placeholder="Комната">
+        <button>Приеднатися</button>
+    </div>
+</div>
+</body>
+<script defer>
+    const form = document.querySelector('.form');
+
+    form.querySelector('button').addEventListener('click', () => {
+        sendForm();
+    });
+
+
+    const sendForm = async () => {
+        const data = {};
+        console.log('Пошло')
+        data.login = form.querySelector('input[name="login"]').value;
+        data.room = form.querySelector('input[name="room"]').value;
+
+        const ref = await fetch('/chat', {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        const responce = await ref.json();
+
+        console.log(responce);
+
+        if(responce.status <= 400)
+        {
+            sessionStorage.setItem('login', data.login);
+            sessionStorage.setItem('room', data.room);
+            location.pathname = '/chat';
+        }
+    }
+
+    // let socket = io();
+    // let msg = "Hello";
+    // let chatWindow = document.querySelector('.chatWindow');
+
+    // socket.on('newConnection', (message) => {
+    //     console.log(message);
+    // });
+    // document.querySelector('.sendMessage').addEventListener('click', () => {
+    //     let message = document.querySelector('.textMessage').value;
+    //
+    //     socket.emit('newMessage', message);
+    // });
+    //
+    // socket.on('newMessage', message => {
+    //     chatWindow.innerHTML += message + '<br>';
+    // });
+    //
+    // socket.emit('join', {username: 'Andrey', room: 'room1'});
+
+
+    // socket.emit('chat message', msg, data => {
+    //     console.log(data);
+    // });
+    //
+    // socket.on('chat message', data => {
+    //     console.log(data);
+    // });
+
+    // socket.on('chat message', message => {
+    //     chatWindow.innerHTML += message + '\n';
+    // })
+
+</script>
+
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .body {
+        width: 100%;
+        min-height: 100%;
+        display: flex;
+        position: fixed;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .body .form {
+        width: 12em;
+        flex-direction: column;
+        display: flex;
+        padding: 3em;
+        background: #2791ba;
+    }
+
+    .body .form input {
+        margin-bottom: 1.5em;
+        padding: 0.7em 0.5em;
+        border-radius: 0.3em;
+        border: none;
+    }
+
+    /*.body .form input::placeholder {*/
+    /*    padding: 10px;*/
+    /*}*/
+
+    .body .form button {
+        padding: 0.7em;
+        justify-content: center;
+        background: #ffcf00;
+        border: none;
+        border-radius: 0.3em;
+    }
+</style>
+</html>

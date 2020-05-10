@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="3c9858a3-8973-4648-950f-b12c62e65587" name="Server" url="http://172.16.82.40">
+        <fileTransfer host="172.16.82.40" port="3450" rootFolder="/var/www/binToHex/binToHex" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="3450" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

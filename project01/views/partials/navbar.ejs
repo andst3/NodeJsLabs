@@ -1,0 +1,17 @@
+<nav>
+    <div class="title">WeatherInfo</div>
+    <div>
+        <% if (isPage === 'index') {%>
+            <a class="active" href="/">Home</a>
+        <% } else {%>
+                <a href="/">Home</a>
+        <% } %>
+    </div>
+    <div>
+        <% if (isPage === 'weather') { %>
+            <a href="/weather" class="active">Weather</a>
+        <% } else { %>
+            <a href="/weather">Weather</a>
+        <% } %>
+    </div>
+</nav>

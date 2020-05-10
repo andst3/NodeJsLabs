@@ -1,0 +1,36 @@
+<%- include("partials/header.ejs") %>
+<body>
+
+<div class="body">
+    <%- include("partials/navbar.ejs") %>
+    <div class="base-weather">
+        <ul>
+            <li class=<%= city == 'Zhytomyr'?'active':undefined%>><a href="/weather/Zhytomyr">Житомир</a></li>
+            <li class=<%= city == 'Kiev'?'active':undefined%>><a href="/weather/Kiev">Київ</a></li>
+            <li class=<%= city == 'Poltava'?'active':undefined%>><a href="/weather/Poltava">Полтава</a></li>
+            <li class=<%= city == 'Sumy'?'active':undefined%>><a href="/weather/Sumy">Суми</a></li>
+        </ul>
+        <div class="weather-info">
+            <h2 class="title">Погода в місті <%= weather.name %></h2>
+            <div class="icon-weather">
+                <img src="http://openweathermap.org/img/w/<%= weather.weather[0].icon %>.png">
+            </div>
+            <table>
+                <tr>
+                    <td class="title-table">Тиск</td>
+                    <td><%= weather.main.pressure %></td>
+                </tr>
+                <tr>
+                    <td class="title-table">Вологість</td>
+                    <td><%= weather.main.humidity %></td>
+                </tr>
+                <tr>
+                    <td class="title-table">Температура</td>
+                    <td><%= Math.round(weather.main.temp - 273.15) %></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+<%- include("partials/footer.ejs") %>

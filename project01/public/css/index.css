@@ -1,0 +1,137 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.body {
+    padding: 0 10em;
+}
+
+nav {
+    display: flex;
+    /*border: 1px solid black;*/
+    background: ghostwhite;
+}
+
+nav div {
+    padding: 15px;
+    font-weight: bold;
+    font-size: 1.2rem;
+
+}
+
+nav .title {
+    font-size: 1.5rem;
+}
+
+
+nav a {
+    color: grey;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+nav div .active {
+    color: black
+}
+
+.base-home {
+    margin-top: 2em;
+    padding-bottom: 1em;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.base-home .button {
+    background: dodgerblue;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.base-weather {
+    display: flex;
+    margin-top: 2em;
+}
+
+.base-weather ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+.base-weather li a{
+    display: block;
+    font-weight: bold;
+    padding: 1em;
+    width: 14em;
+    border-bottom: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+    border-left: 1px solid lightgrey;
+}
+
+.base-weather li:first-child a{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top: 1px solid lightgrey;
+}
+
+.base-weather li:last-child a{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.base-weather .active a{
+    background: dodgerblue;
+    color: white;
+}
+
+.base-weather a {
+    text-decoration: none;
+    color: black;
+}
+
+.base-weather .active a{
+    color: white;
+}
+
+.base-weather .weather-info {
+    margin-left: 4em;
+    padding: 20px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    flex-grow: 2;
+}
+
+.base-weather .weather-info .title {
+    margin-top: 0.2em;
+
+}
+
+.base-weather .weather-info .icon-weather {
+    text-align: center;
+}
+
+.base-weather .weather-info .icon-weather img{
+    width: 7em;
+    height: 7em;
+}
+
+.base-weather .weather-info table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.base-weather .weather-info table td {
+    padding: 1em;
+    border: 1px solid lightgrey;
+}
+
+.base-weather .weather-info table .title-table {
+    width: 60%;
+}

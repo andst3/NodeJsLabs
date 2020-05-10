@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="body">
+    <div class="info">
+        <div class="userInfo">
+            <p>Room: <span class="spanRoom"></span></p>
+            <p>Username: <span class="spanLogin"></span></p>
+        </div>
+        <div class="users">
+            <div>Users in the chatroom</div>
+        </div>
+    </div>
+    <div class="chat">
+        <div class="messages"></div>
+        <div class="sendMessage">
+            <input type="text" placeholder="Message">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+<script>
+    document.querySelector('.userInfo .spanRoom').innerHTML = sessionStorage.getItem('room');
+    document.querySelector('.userInfo .spanLogin').innerHTML = sessionStorage.getItem('login');
+
+    let socket = io();
+
+    socket.emit('join', {username: sessionStorage.getItem('login'), room: sessionStorage.getItem('room')});
+
+    socket.on('join', ({arrayUsers, message}) => {
+        newMessage('Admin', message, '#2791ba');
+        document.querySelector('.users').innerHTML = `<div>Users in the chatroom</div>`;
+        arrayUsers.forEach(user => {
+            let div = document.createElement('div');
+            div.innerHTML = user;
+            document.querySelector('.users').append(div);
+        });
+
+    });
+
+    socket.on('newMessage', ({username, msg}) => newMessage(username, msg));
+
+    const sendMessage = () => {
+        let msg = document.querySelector('.sendMessage input[type="text"]').value;
+        document.querySelector('.sendMessage input[type="text"]').value = '';
+        socket.emit('newMessage', msg);
+        newMessage(sessionStorage.getItem('login'), msg, 'green');
+    };
+
+    const newMessage = (username, msg, color = '#ffcf00') => {
+        let chat = document.querySelector('.chat .messages');
+        let divMessage = document.createElement('div');
+        let time = new Date();
+
+        divMessage.style.background = color;
+        divMessage.className = 'message';
+        divMessage.innerHTML = '<p>' + username + ' ' + time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }) + '</p><p class="messageText">' + msg + '</p>'
+        chat.append(divMessage);
+    }
+
+</script>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .body {
+        display: flex;
+        /*align-items: stretch;*/
+        height: 100vh;
+        width: 100%;
+    }
+
+    .body .info {
+        padding: 2em;
+        /*width: 14em;*/
+        height: auto;
+        /*position: fixed;*/
+        /*border: 1px solid black;*/
+        display: flex;
+        flex-direction: column;
+        background: #2791ba;
+    }
+
+    .body .info > div {
+        /*border: 1px solid black;*/
+        margin-bottom: 3em;
+        border-radius: 0.3em;
+        background: white;
+    }
+
+    .body .info .userInfo {
+        padding: 1em;
+        background: #a8e9ff;
+    }
+
+    .body .info .users {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .body .info .users div {
+        padding: 1em;
+        border-bottom: 1px solid black;
+        background: white;
+    }
+
+    .body .info .users div:first-child {
+        border-top-left-radius: 0.3em;
+        border-top-right-radius: 0.3em;
+        background: #a8e9ff;
+    }
+
+    .body .info .users div:last-child {
+        border-bottom: none;
+        border-bottom-left-radius: 0.3em;
+        border-bottom-right-radius: 0.3em;
+    }
+
+    .body .userInfo p {
+        margin: 0;
+    }
+
+    .body .chat {
+        flex: 1 0 auto;
+        position: relative;
+        padding: 0 2em 0.1em 2em;
+        display: flex;
+        flex-direction: column;
+        /*height: 100%;*/
+        justify-content: space-between;
+    }
+
+    .body .chat .messages {
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        padding: 1em 0;
+        /*flex: 1 0 auto;*/
+        /*width: 100%;*/
+
+    }
+
+    .body .chat .messages .message {
+        /*border: 1px solid black;*/
+        /*width: 100%;*/
+        padding: 0 1em;
+        margin-bottom: 1em;
+        color: white;
+        background: green;
+        border-radius: 0.5em;
+    }
+
+    .body .chat .sendMessage {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .body .chat .sendMessage input[type="text"] {
+        width: 85%;
+        padding: 1em 1em;
+        border: none;
+        border-top: 1px solid #9fa2a2;
+        border-bottom: 1px solid #9fa2a2;
+    }
+
+    .body .chat .sendMessage button {
+        padding: 0.7em 1em;
+        width: 12%;
+        background: #ffcf00;
+        border: none;
+        border-radius: 0.5em;
+    }
+</style>
+</html>
