@@ -59,7 +59,7 @@ io.on('connection', socket => {
         let message = 'Welcome ' + username + '!';
         io.to(socket.id).emit('join', {arrayUsers: Object.values(objUsers), message});
         message = username + ' has joined!';
-        socket.broadcast.to(room).emit('newJoin', {arrayUsers: Object.values(objUsers), message});
+        socket.broadcast.to(room).emit('join', {arrayUsers: Object.values(objUsers), message});
 
         socket.on('newMessage', msg => {
             socket.broadcast.to(room).emit('newMessage', {username, msg});
