@@ -2,9 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a95c55d-859a-4101-91cf-574df8bf5035" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/project04/functions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project04/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project04/models/users.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project04/tests/fuctorial.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project04/tests/model.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-manager-typescript/client/src/api/tasks/TaskService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-manager-typescript/client/src/common/interfaces/ITask.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-manager-typescript/client/src/components/tasks/TaskActions.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-manager-typescript/client/src/components/tasks/TasksTable.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-manager-typescript/client/src/store/modules/tasks.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-manager-typescript/client/src/views/Tasks.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-manager-typescript/server/src/tasks/tasks.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-manager-typescript/server/src/tasks/tasks.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-manager-typescript/server/src/tasks/tasks.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-manager-typescript/server/src/tasks/tasks.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-manager/server/routes/tasks.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-manager/server/src/models/task.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project03/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/project03/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-manager/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/task-manager/server/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-manager/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/task-manager/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-manager/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/task-manager/server/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +40,7 @@
       <list>
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="TypeScript File" />
         <option value="Vue Single File Component" />
         <option value="JavaScript File" />
       </list>
@@ -45,17 +65,20 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="ts.external.directory.path" value="G:\Web\NodeJS\task-manager-typescript\client\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="OPEN_URL_DIALOG">
       <recent name="http://172.16.82.40" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\Web\NodeJS\task-manager\server\src" />
+      <recent name="G:\Web\NodeJS\task-manager-typescript\client\src" />
       <recent name="G:\Web\NodeJS\task-manager\client\src" />
       <recent name="G:\Web\NodeJS\task-manager\client\src\views" />
       <recent name="D:\WebDesign\NodeJS\project02\src" />
-      <recent name="G:\Web\NodeJS\project01\public\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -110,17 +133,24 @@
       <workItem from="1588584618092" duration="545000" />
       <workItem from="1588587305355" duration="11156000" />
       <workItem from="1589106013519" duration="669000" />
-      <workItem from="1589369633259" duration="528000" />
+      <workItem from="1589369633259" duration="5964000" />
+      <workItem from="1589463844700" duration="10741000" />
+      <workItem from="1589565513339" duration="1269000" />
+      <workItem from="1589566848381" duration="673000" />
+      <workItem from="1589647348426" duration="10028000" />
+      <workItem from="1589726706029" duration="13179000" />
+      <workItem from="1589792509872" duration="17760000" />
+      <workItem from="1589878503210" duration="28136000" />
+      <workItem from="1589962508452" duration="12599000" />
+      <workItem from="1590063922851" duration="1137000" />
+      <workItem from="1590145254216" duration="3542000" />
+      <workItem from="1590165341557" duration="9037000" />
+      <workItem from="1590218845538" duration="26782000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/../typescript/1 types.js" />
-      </list>
-    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="179" key="#Deployment" timestamp="1586200710964">
@@ -139,11 +169,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="727" y="311" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588607229969" />
-    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1588598585827">
+    <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590254273715">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="526" y="193" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1581442068222" />
-    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588598585827" />
+    <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590254273715" />
+    <state x="703" y="356" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1589745199550">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="703" y="356" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1589745199550" />
+    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1590065612596">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590065612596" />
     <state width="1877" height="351" key="GridCell.Tab.0.bottom" timestamp="1586255579315">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -212,11 +249,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586200004825" />
-    <state x="659" y="299" key="com.intellij.ide.util.TipDialog" timestamp="1588585140471">
+    <state x="659" y="299" key="com.intellij.ide.util.TipDialog" timestamp="1590218847818">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1581442044930" />
-    <state x="659" y="299" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588585140471" />
+    <state x="659" y="299" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590218847818" />
     <state x="581" y="201" width="758" height="638" key="find.popup" timestamp="1586100508657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -225,13 +261,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="802" y="171" key="ftp.server.browser/0.0.1920.1040@0.0.1920.1040" timestamp="1586200707032" />
-    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1589369962057">
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1589823366292">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1589369962057" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1584728448754">
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1589823366292" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1590245377232">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584728448754" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590245377232" />
   </component>
 </project>
