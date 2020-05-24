@@ -51,23 +51,26 @@ io.on('connection', socket => {
     console.log('New user connected');
 
     socket.on('join', ({username, room}) => {
-        objUsers[socket.id] = username;
+        if(!objUsers[room]) {
+            objUsers[room] = {};
+        }
+        objUsers[room][socket.id] = username;
         socket.join(room);
-        console.log(username, room);
-        console.log('arrayUsers:', objUsers);
+        // console.log(username, room);
+        // console.log('arrayUsers:', objUsers);
 
         let message = 'Welcome ' + username + '!';
-        io.to(socket.id).emit('join', {arrayUsers: Object.values(objUsers), message});
+        io.to(socket.id).emit('join', {arrayUsers: Object.values(objUsers[room]), message});
         message = username + ' has joined!';
-        socket.broadcast.to(room).emit('join', {arrayUsers: Object.values(objUsers), message});
+        socket.broadcast.to(room).emit('join', {arrayUsers: Object.values(objUsers[room]), message});
 
         socket.on('newMessage', msg => {
             socket.broadcast.to(room).emit('newMessage', {username, msg});
         })
         socket.on('disconnect', () => {
-            delete objUsers[socket.id];
+            delete objUsers[room][socket.id];
             let message = username + ' disconnected!'
-            socket.to(room).emit('join', {arrayUsers: Object.values(objUsers), message});
+            socket.to(room).emit('join', {arrayUsers: Object.values(objUsers[room]), message});
         });
     });
 

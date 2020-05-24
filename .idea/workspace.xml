@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a95c55d-859a-4101-91cf-574df8bf5035" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/project04/functions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project04/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project04/models/users.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project04/tests/fuctorial.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project04/tests/model.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-manager-typescript/client/src/api/tasks/TaskService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-manager-typescript/client/src/common/interfaces/ITask.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-manager-typescript/client/src/components/tasks/TaskActions.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-manager-typescript/client/src/components/tasks/TasksTable.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-manager-typescript/client/src/store/modules/tasks.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-manager-typescript/client/src/views/Tasks.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-manager-typescript/server/src/tasks/tasks.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-manager-typescript/server/src/tasks/tasks.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-manager-typescript/server/src/tasks/tasks.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-manager-typescript/server/src/tasks/tasks.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-manager/server/routes/tasks.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-manager/server/src/models/task.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-manager/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/task-manager/server/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-manager/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/task-manager/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-manager/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/task-manager/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project03/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/project03/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,6 +126,8 @@
       <workItem from="1590145254216" duration="3542000" />
       <workItem from="1590165341557" duration="9037000" />
       <workItem from="1590218845538" duration="26782000" />
+      <workItem from="1590264528572" duration="33000" />
+      <workItem from="1590323287314" duration="861000" />
     </task>
     <servers />
   </component>
@@ -177,10 +159,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="703" y="356" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1589745199550" />
-    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1590065612596">
+    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1590264556210">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590065612596" />
+    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590264556210" />
     <state width="1877" height="351" key="GridCell.Tab.0.bottom" timestamp="1586255579315">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -249,10 +231,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586200004825" />
-    <state x="659" y="299" key="com.intellij.ide.util.TipDialog" timestamp="1590218847818">
+    <state x="659" y="299" key="com.intellij.ide.util.TipDialog" timestamp="1590264534679">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="659" y="299" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590218847818" />
+    <state x="659" y="299" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590264534679" />
     <state x="581" y="201" width="758" height="638" key="find.popup" timestamp="1586100508657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
